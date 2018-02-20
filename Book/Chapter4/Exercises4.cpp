@@ -3,25 +3,9 @@
 #include <vector>
 #include <algorithm>
 #include <string>
+#include <math.h>
 
 using namespace std;
-
-/*
-int median()
-{
-	vector<double> temperatures; // temperatures
-	for (double temp; cin >> temp; ) // read into temp
-		temperatures.push_back(temp); // put temp into vector
-									  // compute mean temperature:
-	double sum = 0;
-	for (double x : temperatures) sum += x;
-	cout << "Average temperature: " << sum / temperatures.size() << '\n';
-	// compute median temperature:
-	sort(temperatures); // sort temperatures
-	cout << "Median temperature: " << temperatures[temperatures.size() / 2] << '\n';
-	return 0;
-}
-*/
 
 int drill()
 {
@@ -223,15 +207,6 @@ int drill()
 	}
 }
 
-int guess()
-{
-	string answer;
-	cout << "Is your number between 50 and 100? ";
-	cin >> answer;
-
-	return 0;
-}
-
 int cities()
 {
 	char option = '&';
@@ -314,6 +289,145 @@ int translator()
 	return 0;
 }
 
+int squares()
+{
+	char option = '&';
+	while (option != '|')
+	{
+		cout << "---SQUARES---" << endl;
+		int square, rice = 1, back_count, limit;
+		double total = 1;
+
+		cout << "Write a number of rice grains: ";
+		cin >> limit;
+		for (square = 0; rice <= limit; square++)
+		{
+			back_count = rice;
+			rice *= 2;
+		}
+		for (int i = 0; i <= 64; i++)
+		{
+			total *= 2;
+		}
+		cout << "Square: " << square << endl;
+		cout << "Total rice: " << rice << endl;
+		cout << "The final rice prize is of: " << total << " grains of rice" << endl;
+
+		cout << endl << "Do you wanna exit? (| = yes): ";
+		cin >> option;
+		cout << endl;
+	}
+	return 0;
+}
+
+int quadratic()
+{
+	char option = '&';
+	while (option != '|')
+	{
+		cout << "---QUADRATIC EQUATIONS---" << endl;
+	    double a, b, c, x1, x2;
+		cout << "Insert the value for A: ";
+		cin >> a;
+		cout << "Insert the value for B: ";
+		cin >> b;
+		cout << "Insert the value for C: ";
+		cin >> c;
+		cout << endl << "-Input-" << endl;
+		cout << a << "x" << char(253) << " + " << b << "x" << " + " << c << " = 0";
+		x1 = ((-b) + sqrt((b*b) - (4 * (a*c)))) / (2 * a);
+		x2 = ((-b) - sqrt((b*b) - (4 * (a*c)))) / (2 * a);
+		cout << endl << "-Result-" << endl;
+		cout << "x1 = " << x1 << endl;
+		cout << "x2 = " << x2 << endl;
+		cout << endl << "Do you wanna exit? (| = yes): ";
+		cin >> option;
+		cout << endl;
+	}
+	return 0;
+}
+
+int scores()
+{
+	char option = '&';
+	vector<int> scores;
+	vector<string> names;
+	int score, comprobation = 0;
+	string name;
+	bool flag = false;
+	cout << "---SCORES---" << endl;
+	while (option != '|')
+	{
+		cout << "-Data Database-" << endl;
+		cout << "Insert a name and its score: ";
+		cin >> name >> score;
+		names.push_back(name);
+		scores.push_back(score);
+
+		cout << endl << "Do you wanna exit? (| = yes): ";
+		cin >> option;
+		cout << endl;
+	}
+
+	names.push_back("NoName");
+	scores.push_back(0);
+	option = '&';
+
+	while (option != '|')
+	{
+		cout << "-Lookup-" << endl;
+		cout << "Insert a name to search: ";
+		cin >> name;
+		while (flag == false)
+		{
+			for (int i = 0; i < names.size(); i++)
+			{
+				if (names[i] == name)
+				{
+					flag = true;
+					cout << "Name: " << names[i] << endl;
+					cout << "Score: " << scores[i] << endl << endl;
+					comprobation += 1;
+				}
+			}
+			if (comprobation == 0)
+			{
+				cout << "NO NAME FOUND!" << endl;
+				cout << "Name: " << names[names.size() - 1] << endl;
+				cout << "Score: " << scores[scores.size() - 1] << endl << endl;
+				break;
+			}
+		}
+		cout << endl << "Insert a score to search: ";
+		cin >> score;
+		while (flag == false)
+		{
+			for (int i = 0; i < scores.size(); i++)
+			{
+				if (scores[i] == score)
+				{
+					flag = true;
+					cout << "Name: " << names[i] << endl;
+					cout << "Score: " << scores[i] << endl << endl;
+					comprobation += 1;
+				}
+			}
+			if (comprobation == 0)
+			{
+				cout << "NO SCORE FOUND!" << endl;
+				cout << "Name: " << names[names.size() - 1] << endl;
+				cout << "Score: " << scores[scores.size() - 1] << endl << endl;
+				break;
+			}
+		}
+		cout << endl << "Do you wanna exit? (| = yes): ";
+		cin >> option;
+		cout << endl;
+	}
+	return 0;
+}
+
+
 int main()
 {
 	int selection;
@@ -322,6 +436,9 @@ int main()
 	cout << "3) Cities" << endl;
 	cout << "5) Calculator" << endl;
 	cout << "6) Translator" << endl;
+	cout << "8) Squares" << endl;
+	cout << "18) Quadratic Equations" << endl;
+	cout << "19) Scores" << endl;
 	cout << "Select a function: ";
 	cin >> selection;
 
@@ -330,17 +447,9 @@ int main()
 	case 0:
 		drill();
 		break;
-	
-	case 1:
-		//median();
-		break;
 
 	case 3:
 		cities();
-		break;
-
-	case 4:
-		guess();
 		break;
 
 	case 5:
@@ -349,6 +458,18 @@ int main()
 
 	case 6:
 		translator();
+		break;
+
+	case 8:
+		squares();
+		break;
+
+	case 18:
+		quadratic();
+		break;
+
+	case 19:
+		scores();
 		break;
 
 	}

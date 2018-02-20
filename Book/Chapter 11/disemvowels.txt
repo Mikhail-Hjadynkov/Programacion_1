@@ -1,0 +1,6 @@
+This may seem strange
+the goal of the program
+is to erase every vowel
+the results may be cool
+but may be tricky to read
+Let's try it out!

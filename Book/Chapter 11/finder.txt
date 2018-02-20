@@ -1,0 +1,7 @@
+this is a test
+so this is a text test
+the main goal is to find
+all the lines where
+the test word is written
+may seem easy
+but this isn't easy test
