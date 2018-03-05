@@ -1,0 +1,21 @@
+New Anagram: 
+hello
+llohe
+elloh
+olleh
+ 
+New Anagram: 
+opn
+nop
+pon
+ 
+New Anagram: 
+oleo
+leoo
+oole
+ 
+New Anagram: 
+monte
+temon
+meton
+ 

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Anagrams", "Anagrams\Anagrams.vcxproj", "{CACD99F9-7C68-4313-AD02-0B2AC220C195}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CACD99F9-7C68-4313-AD02-0B2AC220C195}.Debug|x64.ActiveCfg = Debug|x64
+		{CACD99F9-7C68-4313-AD02-0B2AC220C195}.Debug|x64.Build.0 = Debug|x64
+		{CACD99F9-7C68-4313-AD02-0B2AC220C195}.Debug|x86.ActiveCfg = Debug|Win32
+		{CACD99F9-7C68-4313-AD02-0B2AC220C195}.Debug|x86.Build.0 = Debug|Win32
+		{CACD99F9-7C68-4313-AD02-0B2AC220C195}.Release|x64.ActiveCfg = Release|x64
+		{CACD99F9-7C68-4313-AD02-0B2AC220C195}.Release|x64.Build.0 = Release|x64
+		{CACD99F9-7C68-4313-AD02-0B2AC220C195}.Release|x86.ActiveCfg = Release|Win32
+		{CACD99F9-7C68-4313-AD02-0B2AC220C195}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A43591B-023E-45DE-801B-D9232547881D}
+	EndGlobalSection
+EndGlobal
